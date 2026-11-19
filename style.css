@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +7,20 @@
 
 html,
 body {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background-image: url("./IMGS/REFRACTED GLASS WALLPAPER - BLUE - DESKTOP 1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-attachment: fixed;
     background-color: black;
 
     color: white;
@@ -26,7 +32,7 @@ body {
 
 header {
     width: 100%;
-    height: 70px;
+    min-height: 70px;
     padding: 20px;
 
     background-color: black;
@@ -37,7 +43,7 @@ header {
     justify-content: flex-end;
     align-items: center;
 
-    height: 100%;
+    min-height: 30px;
 }
 
 nav ul {
@@ -65,7 +71,8 @@ main {
     display: flex;
 
     width: 100%;
-    height: calc(100svh - 70px);
+    min-height: calc(100vh - 70px);
+    min-height: calc(100svh - 70px);
 
     padding: 0;
     margin: 0;
@@ -76,7 +83,7 @@ main {
     align-items: flex-end;
 
     width: 60%;
-    height: 100%;
+    min-height: inherit;
 
     padding: 0 0 50px 40px;
 }
@@ -96,7 +103,7 @@ aside {
     flex-direction: column;
 
     width: 40%;
-    height: 100%;
+    min-height: inherit;
 
     padding: 30px;
 
@@ -118,7 +125,7 @@ aside {
 .imagens img {
     display: block;
 
-    width: 200px;
+    width: clamp(120px, 15vw, 200px);
     height: auto;
 
     object-fit: contain;
@@ -152,13 +159,14 @@ aside p {
 
 .lista-projetos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 25px;
     margin-top: 35px;
 }
 
 .projeto {
+    min-width: 0;
     padding: 15px;
 
     background-color: #181818;
@@ -166,6 +174,8 @@ aside p {
 }
 
 .projeto img {
+    display: block;
+
     width: 100%;
     height: 180px;
 
@@ -211,7 +221,7 @@ aside p {
 
 .abas-experiencia {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 25px;
 
@@ -271,6 +281,7 @@ aside p {
     flex-direction: column;
 
     gap: 7px;
+    min-width: 0;
 }
 
 .aba-categoria {
@@ -299,6 +310,7 @@ aside p {
 .aba-seta {
     margin-left: auto;
     align-self: flex-start;
+    flex-shrink: 0;
 
     color: #777;
     font-size: 22px;
@@ -497,35 +509,6 @@ aside p {
     line-height: 1.8;
 }
 
-@media (max-width: 700px) {
-
-    .abas-experiencia {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .aba {
-        min-height: 125px;
-        padding: 20px;
-    }
-
-    .experiencia-card {
-        padding: 18px;
-    }
-
-    .experiencia-topo {
-        flex-direction: column;
-    }
-
-    .titulo-secao h2 {
-        font-size: 23px;
-    }
-
-    .lista-projetos {
-        grid-template-columns: 1fr;
-    }
-}
-
 .rodape {
     width: 100%;
     padding: 60px 8% 25px;
@@ -537,6 +520,7 @@ aside p {
 }
 
 .rodape-container {
+    width: 100%;
     max-width: 1200px;
     margin: auto;
 }
@@ -604,6 +588,7 @@ aside p {
     justify-content: space-between;
     align-items: center;
 
+    gap: 15px;
     padding-top: 22px;
 
     border-top: 1px solid #252525;
@@ -612,7 +597,157 @@ aside p {
     font-size: 12px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
+
+    .principal {
+        width: 55%;
+        padding-left: 25px;
+    }
+
+    aside {
+        width: 45%;
+        padding: 25px;
+    }
+
+    .principal h1 {
+        font-size: clamp(38px, 5vw, 60px);
+    }
+
+    .imagens img {
+        width: clamp(110px, 16vw, 170px);
+    }
+
+    .lista-projetos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .abas-experiencia {
+        gap: 15px;
+    }
+
+    .aba {
+        gap: 14px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    header {
+        min-height: 65px;
+        padding: 15px 20px;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    main {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .principal {
+        width: 100%;
+        min-height: 45svh;
+
+        align-items: flex-end;
+
+        padding: 30px 20px;
+    }
+
+    .principal h1 {
+        font-size: clamp(36px, 9vw, 58px);
+        letter-spacing: -1.5px;
+    }
+
+    aside {
+        width: 100%;
+        min-height: auto;
+
+        padding: 30px 20px;
+
+        border-left: none;
+        border-top: 1px solid #222;
+    }
+
+    .imagens img {
+        width: clamp(120px, 30vw, 180px);
+    }
+
+    .imagens img:first-child {
+        margin-right: -25px;
+    }
+
+    aside p {
+        margin-top: 25px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .projetos,
+    .experiencia {
+        min-height: auto;
+        padding: 40px 6%;
+    }
+
+    .lista-projetos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .projeto {
+        padding: 12px;
+    }
+
+    .projeto img {
+        height: 150px;
+    }
+
+    .abas-experiencia {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 30px auto;
+    }
+
+    .aba {
+        min-height: 125px;
+        padding: 20px;
+    }
+
+    .experiencia-card {
+        padding: 18px;
+    }
+
+    .experiencia-topo {
+        flex-direction: column;
+    }
+
+    .titulo-secao h2 {
+        font-size: 23px;
+    }
+
+    .experiencia-topo h3 {
+        font-size: 19px;
+    }
+
+    .linha-tempo {
+        padding-left: 25px;
+    }
+
+    .marcador {
+        left: -26px;
+    }
 
     .rodape {
         padding: 45px 6% 20px;
@@ -634,5 +769,73 @@ aside p {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    nav ul {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .principal {
+        min-height: 40svh;
+        padding: 25px 15px;
+    }
+
+    .principal h1 {
+        font-size: 35px;
+    }
+
+    aside {
+        padding: 25px 15px;
+    }
+
+    .imagens img {
+        width: 125px;
+    }
+
+    .lista-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto img {
+        height: 190px;
+    }
+
+    .aba {
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .aba-icone {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .aba-texto h3 {
+        font-size: 16px;
+    }
+
+    .aba-texto p {
+        font-size: 12px;
+    }
+
+    .aba-categoria {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .experiencia-card {
+        padding: 15px;
+    }
+
+    .descricao {
+        font-size: 14px;
     }
 }

@@ -48,3 +48,4 @@ botoesDetalhes.forEach(function(botao) {
     });
 
 });
+
