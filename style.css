@@ -1,8 +1,3 @@
-
-/* ========================================
-   CONFIGURAÇÕES GERAIS
-======================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -28,11 +23,6 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
-
-/* ========================================
-   CABEÇALHO
-======================================== */
 
 header {
     width: 100%;
@@ -71,11 +61,6 @@ nav a:hover {
     color: #60a5fa;
 }
 
-
-/* ========================================
-   APRESENTAÇÃO PRINCIPAL
-======================================== */
-
 main {
     display: flex;
 
@@ -106,11 +91,6 @@ main {
     letter-spacing: -2px;
 }
 
-
-/* ========================================
-   PAINEL LATERAL
-======================================== */
-
 aside {
     display: flex;
     flex-direction: column;
@@ -125,9 +105,6 @@ aside {
 
     border-left: 1px solid #222;
 }
-
-
-/* IMAGENS */
 
 .imagens {
     display: flex;
@@ -154,9 +131,6 @@ aside {
     margin-right: -35px;
 }
 
-
-/* TEXTO DO PAINEL LATERAL */
-
 aside p {
     margin-top: 30px;
 
@@ -165,11 +139,6 @@ aside p {
 
     color: #ccc;
 }
-
-
-/* ========================================
-   SEÇÃO DE PROJETOS
-======================================== */
 
 .projetos {
     width: 100%;
@@ -215,11 +184,6 @@ aside p {
     line-height: 1.6;
 }
 
-
-/* ========================================
-   SEÇÃO DE EXPERIÊNCIA
-======================================== */
-
 .experiencia {
     width: 100%;
     min-height: 100vh;
@@ -229,9 +193,6 @@ aside p {
     background-color: #000;
     color: white;
 }
-
-
-/* TÍTULOS DAS SEÇÕES */
 
 .titulo-secao {
     margin-bottom: 40px;
@@ -248,11 +209,6 @@ aside p {
     color: #999;
 }
 
-
-/* ========================================
-   ABAS DE EXPERIÊNCIA
-======================================== */
-
 .abas-experiencia {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -264,9 +220,6 @@ aside p {
 
     margin: 40px auto;
 }
-
-
-/* BOTÕES */
 
 .aba {
     position: relative;
@@ -293,9 +246,6 @@ aside p {
     transition: all 0.3s ease;
 }
 
-
-/* ÍCONES DOS BOTÕES */
-
 .aba-icone {
     display: flex;
     justify-content: center;
@@ -315,9 +265,6 @@ aside p {
 
     transition: 0.3s ease;
 }
-
-
-/* TEXTOS DOS BOTÕES */
 
 .aba-texto {
     display: flex;
@@ -349,9 +296,6 @@ aside p {
     line-height: 1.5;
 }
 
-
-/* SETA DOS BOTÕES */
-
 .aba-seta {
     margin-left: auto;
     align-self: flex-start;
@@ -361,9 +305,6 @@ aside p {
 
     transition: 0.3s ease;
 }
-
-
-/* EFEITO AO PASSAR O MOUSE */
 
 .aba:hover {
     transform: translateY(-5px);
@@ -381,9 +322,6 @@ aside p {
 
     transform: translate(3px, -3px);
 }
-
-
-/* BOTÃO ATIVO */
 
 .aba.ativa {
     background: #151a23;
@@ -406,11 +344,6 @@ aside p {
     color: #60a5fa;
 }
 
-
-/* ========================================
-   CONTEÚDOS DAS ABAS
-======================================== */
-
 .conteudo {
     display: none;
 }
@@ -418,11 +351,6 @@ aside p {
 .conteudo.ativo {
     display: block;
 }
-
-
-/* ========================================
-   LINHA DO TEMPO
-======================================== */
 
 .linha-tempo {
     position: relative;
@@ -444,9 +372,6 @@ aside p {
     background-color: #333;
 }
 
-
-/* MARCADORES */
-
 .marcador {
     position: absolute;
 
@@ -464,11 +389,6 @@ aside p {
     box-shadow: 0 0 0 2px #2563eb;
 }
 
-
-/* ========================================
-   CARDS DE EXPERIÊNCIA
-======================================== */
-
 .experiencia-card {
     padding: 25px;
 
@@ -483,9 +403,6 @@ aside p {
 .experiencia-card:hover {
     border-color: #2563eb;
 }
-
-
-/* TOPO DOS CARDS */
 
 .experiencia-topo {
     display: flex;
@@ -511,9 +428,6 @@ aside p {
     color: #aaa;
 }
 
-
-/* STATUS */
-
 .status {
     padding: 6px 12px;
 
@@ -525,20 +439,12 @@ aside p {
     font-size: 12px;
 }
 
-
-/* DESCRIÇÃO */
-
 .descricao {
     margin: 22px 0;
 
     color: #aaa;
     line-height: 1.7;
 }
-
-
-/* ========================================
-   BOTÃO DE DETALHES
-======================================== */
 
 .btn-detalhes {
     padding: 10px 16px;
@@ -558,11 +464,6 @@ aside p {
     background: #2563eb;
     border-color: #2563eb;
 }
-
-
-/* ========================================
-   DETALHES DAS EXPERIÊNCIAS
-======================================== */
 
 .detalhes {
     display: none;
@@ -622,5 +523,116 @@ aside p {
 
     .lista-projetos {
         grid-template-columns: 1fr;
+    }
+}
+
+.rodape {
+    width: 100%;
+    padding: 60px 8% 25px;
+
+    background: #080808;
+    border-top: 1px solid #252525;
+
+    color: white;
+}
+
+.rodape-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.rodape-introducao {
+    margin-bottom: 35px;
+}
+
+.rodape-introducao h2 {
+    margin-bottom: 12px;
+
+    font-size: 30px;
+    color: white;
+}
+
+.rodape-introducao p {
+    max-width: 500px;
+
+    color: #999;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.rodape-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-bottom: 45px;
+}
+
+.rodape-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 18px;
+
+    background: #141414;
+    border: 1px solid #292929;
+    border-radius: 8px;
+
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.rodape-links a i {
+    color: #60a5fa;
+    font-size: 17px;
+}
+
+.rodape-links a:hover {
+    background: #151a23;
+    border-color: #3b82f6;
+
+    color: white;
+    transform: translateY(-4px);
+}
+
+.rodape-final {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #252525;
+
+    color: #666;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+
+    .rodape {
+        padding: 45px 6% 20px;
+    }
+
+    .rodape-introducao h2 {
+        font-size: 25px;
+    }
+
+    .rodape-links {
+        flex-direction: column;
+    }
+
+    .rodape-links a {
+        width: 100%;
+    }
+
+    .rodape-final {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 }
