@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
@@ -174,26 +176,45 @@
 
         <h2>MINHA EXPERIÊNCIA</h2>
 
-        <div class="abas-experiencia">
+<div class="abas-experiencia">
 
-            <button
-                class="aba ativa"
-                data-aba="profissional"
-                type="button"
-            >
-                Profissional
-            </button>
-
-
-            <button
-                class="aba"
-                data-aba="academica"
-                type="button"
-            >
-                Acadêmica
-            </button>
-
+    <button
+        class="aba ativa"
+        data-aba="profissional"
+        type="button"
+    >
+        <div class="aba-icone">
+            <i class="fa-solid fa-briefcase"></i>
         </div>
+
+        <div class="aba-texto">
+            <span class="aba-categoria">TRAJETÓRIA</span>
+            <h3>Experiência Profissional</h3>
+            <p>Minha atuação no mercado de trabalho.</p>
+        </div>
+
+        <span class="aba-seta">↗</span>
+    </button>
+
+    <button
+        class="aba"
+        data-aba="academica"
+        type="button"
+    >
+        <div class="aba-icone">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <div class="aba-texto">
+            <span class="aba-categoria">APRENDIZADO</span>
+            <h3>Formação Acadêmica</h3>
+            <p>Meus estudos e cursos complementares.</p>
+        </div>
+
+        <span class="aba-seta">↗</span>
+    </button>
+
+</div>
 
         <div class="conteudos">
 
