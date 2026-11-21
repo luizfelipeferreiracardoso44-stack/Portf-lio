@@ -89,7 +89,7 @@ main {
 }
 
 .principal h1 {
-    color: black;
+    color: white;
 
     font-size: clamp(40px, 5vw, 75px);
     font-weight: 800;
